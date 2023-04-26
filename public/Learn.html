@@ -1,0 +1,187 @@
+https://www.codingninjas.com/codestudio/library/top-react-hooks-interview-questions
+
+Interview Tips
+What is React?
+React is an efficient, flexible, open-source front-end javaScript library created by FaceBook in 2011. 
+It is a tool for building complex and reusable user interfaces, especially for single-page applications.
+It follows the component-based approach.
+ 
+What are the important features of React?
+The following are React's important features:
+It supports server-side rendering.
+It follows the component-based approach.
+It follows unidirectional data flow.
+It uses Virtual DOM rather than real DOM.
+React uses JSX, a combination of basic HTML and JavaScript.
+ 
+What are the advantages of React?  
+JSX Reusable Components Unidirectional Data Flow: Use of Virtual DOM:  SEO Friendly:
+The advantages of React are as follows:
+Easy to Learn and Use: React is easy to learn and use, as it uses JSX, a combination of basic HTML and JavaScript with some addition.
+ 
+Reusable Components: React follows the components-based approach to building mobile and web applications, and an application consists of multiple components. You can reuse these components throughout the application.
+ 
+Unidirectional Data Flow:  React follows the unidirectional data flow while designing a react app. It becomes easier to debug errors and identify where the problem occurs.
+ 
+Use of Virtual DOM:  React uses the Virtual DOM instead of Real DOM. Virtual DOM compares the component's previous states and updates only the changed items in Real DOM instead of updating all the components again. Thus it makes the web application faster.
+ 
+SEO Friendly: React allows server-side rendering, which boosts the SEO of an application.
+ 
+What are the limitations of React?
+Following are the limitations of React:
+The first thing is that React is not a fully-fledged framework. It is just a JavaScript library.
+The beginner programmer might face difficulties understanding React fully.
+There are numerous components in React, which might take time to grasp all the benefits fully.
+The coding might become complex using JSX.
+ 
+What do you understand by React hooks?
+Hooks are the newly added features in React v16.8. They are in-built functions that allow the developers to use state and life cycle methods within the components in React. They allow you to use all React features without writing a class component. Using Hooks, we can extract the stateful logic from a component so it can be tested independently and reused. This makes it possible to share Hooks among many components.
+ 
+What are the benefits of using React hooks?
+Following are some of the benefits of using React Hooks:
+If you use React Hooks, you can code in React without using classes.
+You can easily test and reuse existing states in your code using hooks.
+ 
+Will react hooks work inside the class component? What do you think?
+No, react hooks won’t work inside the class component.
+
+
+
+What is the Virtual DOM?
+The Virtual DOM in react a concept, where a virtual representation of the real DOM is kept inside the memory and is synced with the real DOM by a library such as ReactDOM.
+ 
+What are the differences between class components and functional components?
+The differences between the class component and functional component are as follows:
+Handling Props || Handling State  ||  Rendor Method ||
+
+Tips: Advance
+
+Why were Hooks introduced in React?
+The main reason for introducing React Hooks was to make the functional components stateful.
+Before React v16.8, the functional components were called stateless components as we could only do the state management and the life cycle methods using only the class components.
+
+Name the rules that must be followed while using React Hooks. 
+You can only call the React Hooks from the react functional components.
+React hooks must only be called at the top level. They should not be called inside nested functions, loops or conditions.
+
+Why do React Hooks make use of refs ?
+Managing focus, media playback or text selection.
+Integrating with DOM libraries by third-party.
+Triggering the imperative animations.
+
+What do you know about the Custom Hooks?
+Custom Hooks in react is a JavaScript function whose name starts with "use", and they may call other Hooks.
+
+
+
+What do you know about React props?
+In react, the prop stands for "Properties". They are plain JavaScript objects. Every React Component accepts a single object argument, known as the props. You can pass these props from one component to another using HTML attributes, and the accepting components accept these props as an argument. One thing to note is that props are immutable, which means they can be changed or manipulated inside a component.
+ 
+What do you understand by React state?
+In React, the states are plain JavaScript objects. The state is used to contain data or information about the component. The state of a component can change over time. Whenever the state changes, it re-renders.
+ 
+What is the difference between state and props in React?
+Both the state and props are JavaScript objects. They are different in their functionality regarding the component.
+state: states modify  (mutable modified)
+props: Props are read-only  (immutable  not modify)
+
+
+What is the use of useState() in React Hooks?
+useState is one of the built-in React hooks. It allows you to track the state in a functional component in React. The term state refers to data or properties that need to be tracked. You need to pass the initial state inside the useState(), which returns variables with the state value and another function to update the current state of the variable.
+
+What is the use of useEffect in React Hooks?
+useEffect is one of the built-in React Hooks. It allows you to manage side effects in your functional components in React. Here the term side effects refer to fetching requests, manipulating DOM, using timer functions and more.
+The useEffect accepts two arguments a callback function and dependencies. The callback function contains the side effects, while the dependencies are optional. If the value of the dependencies has changed between the rendering, then only useEffect() to execute the callback function.
+ 
+What is the use of useRef in React Hooks?
+ It allows you to persist values between render. You can also use it to store a mutable value that does not cause a re-render when updated. You must pass the initial value inside the useRef, which returns a mutable ref object. The object has a property called "current", where the value is persisted.
+ 
+What is the use of the useCallback hook?
+useCallback is one of the react hooks used to prevent functions declared within the body of function components from being recreated on every render.
+ 
+What is the use of the useMemo hook?
+The useMemo hook is used to memoise an expensive operation that we give it. The term "memoise" refers to remembering past values that have already been computed.
+
+ 
+What are React Hooks? 
+Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. With Hooks, you can extract stateful logic from a component so it can be tested independently and reused. Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.
+
+
+https://www.fullstack.cafe/blog/react-hooks-interview-questions
+
+Q1: What are React Hooks?
+Hooks are a new addition in React 16.8.
+Hooks allow you to reuse stateful logic without changing your component hierarchy. 
+
+
+Q2: How to access DOM elements in React?
+useing  useRef() hook is to access DOM elements. 
+Define  || Assign  || After mounting
+Define the reference to access the element const elementRef = useRef(); 
+Assign the reference to ref attribute of the element: <div ref={elementRef}></div>;
+After mounting, elementRef.current points to the DOM element.
+ 
+
+
+Q3: How to call loading function with React useEffect only once?
+empty array [] have to pass as the second argument/parameter.
+ 
+
+Q4:Provide an example of any simple Custom React Hook. Why do we need Custom Hooks?
+1-avoid copying and pasting the same logic in multiple components.
+2-wrap around the stateful logic
+
+Q5: What is useState() in React?
+const [moreStuff, setMoreStuff] = useState(...);
+
+Q6: Can you initialise state from a function? Provide and example
+const [token] = useState(() => {
+  let token = window.localStorage.getItem("my-token");
+  return token || "default#-token#"
+})
+
+Q7: Do two components using the same Hook share state?
+
+Q8: Explain the difference between useState and useRef hooks?
+reference created by useRef doesn't trigger re-rendering, 
+while updating the state (setState) makes the component re-render;
+useRef returns an object with a current property holding the actual value. 
+In contrast, useState returns an array with two elements.
+useRef‘s current property is mutable, but useState‘s state variable is not.
+
+Q9: How can I make use of Error Boundaries in functional React components?
+
+Q10: How to use componentWillMount() in React Hooks?
+You can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+useEffect(() => {
+  // Your code here
+ }, []);
+
+ Q11: What are common use cases for the useMemo?
+ The primary purpose of useMemo hook is "performance optimization".
+ It returns a memoized value,
+
+ Q12: What are differences between React.memo() and useMemo()?
+ React.memo() is a higher-order component (HOC) that we can use to wrap components 
+ useMemo() is a React Hook that we can use to wrap functions within a component.
+
+  It accepts two arguments - create function (which should return a value to be memoized) and dependency array.
+
+Q13: What are production use cases for the useRef?
+useRef simply returns a plain Javascript object. I
+useRef value will persist 
+
+Q14: What is equivalent of this code using React Hooks?
+componentWillUnmount, How to refactor this code using React Hooks?
+
+Q15: When would you use useContext hook?
+React’s useContext hook makes it easy to pass data throughout your app without manually passing props down the tree. React Context is a way to manage state globally.
+
+
+Q16: When would you use useRef?
+To store a ref to DOM elements so you can later do something with them:
+To store values without triggering re-renders:
+
+
+
+Q17: When writing a Custom Hook, what is the difference between it and a normal function?
